@@ -28,13 +28,13 @@ Follow these steps to get the project up and running on your local machine:
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/AmiJP/openhouse-exercise.git
+   git clone https://github.com/AmiJP/openhouseAi-coding-exercise.git
    ```
 
 2. Navigate to the project root directory:
 
    ```bash
-   cd <project folder>
+   cd openhouseAi-coding-exercise
    ```
 
 3. Install project dependencies:
