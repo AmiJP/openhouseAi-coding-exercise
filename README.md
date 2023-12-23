@@ -103,3 +103,22 @@ In terms of best practices, I would adhere to the following principles:
 - I would conduct performance audits and optimize critical parts of the application to ensure a smooth and responsive user experience.
 
 By addressing these areas, I aim to create a more robust and user-friendly application, reflecting a commitment to both user satisfaction and code quality.
+
+## Application Screenshots
+- #### Homepage (tooltip)
+![tooltip](https://github.com/AmiJP/openhouseAi-coding-exercise/assets/128651055/f4a62a85-87e5-4067-81e9-0a96a8b59938)
+
+---
+
+- #### Homepage (more cards)
+![communities](https://github.com/AmiJP/openhouseAi-coding-exercise/assets/128651055/aa2db3fa-55a9-458e-be90-87c6711daa2c)
+
+---
+
+- #### Error (when no data)
+![error](https://github.com/AmiJP/openhouseAi-coding-exercise/assets/128651055/9c2c2cd8-c0d1-4029-9bdc-b3e659f610db)
+
+---
+
+- #### Loading screen (when community fetching)
+![loading](https://github.com/AmiJP/openhouseAi-coding-exercise/assets/128651055/3112622f-0859-48f5-8135-d87fa608dff4)
