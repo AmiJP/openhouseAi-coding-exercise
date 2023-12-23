@@ -1,6 +1,7 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import { TooltipProvider } from "@/components/ui/tooltip";
 
 export const Providers: React.FC<{ children: React.ReactNode }> = ({
   children,
@@ -9,7 +10,7 @@ export const Providers: React.FC<{ children: React.ReactNode }> = ({
   return (
     <QueryClientProvider client={queryClient}>
       <Toaster />
-      {children}
+      <TooltipProvider>{children}</TooltipProvider>
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   );

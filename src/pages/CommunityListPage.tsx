@@ -43,14 +43,14 @@ export const CommunityListPage: React.FC = () => {
   return (
     <div className="container mx-auto">
       <h1 className="text-2xl font-bold text-slate-700 mb-4">Communities</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-6">
         {communities?.map((community) => {
           return <CommunityCard key={community.id} community={community} />;
         })}
       </div>
       <div
         className={cn(
-          "flex justify-center items-center gap-2 mt-8 transition-all",
+          "flex justify-center items-center gap-2 mt-8 pb-8 transition-all",
           "hover:scale-105 cursor-pointer",
           "text-slate-600 hover:text-slate-700"
         )}
