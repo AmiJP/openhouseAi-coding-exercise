@@ -9,6 +9,11 @@ import {
 } from "@/components/ui/card";
 import NoImage from "@/assets/images/no-image.png";
 import { CircleDollarSign, MapPin } from "lucide-react";
+import {
+  Tooltip,
+  TooltipTrigger,
+  TooltipContent,
+} from "@/components/ui/tooltip";
 
 export const CommunityCard: React.FC<{
   community: CommunityWithAveragePrice;
@@ -30,28 +35,54 @@ export const CommunityCard: React.FC<{
         />
       </CardHeader>
       <CardContent className="mt-4">
-        <CardTitle className="text-xl text-slate-600 text-center">
-          {community.name}
-        </CardTitle>
+        <Tooltip>
+          <TooltipTrigger>
+            <CardTitle className="text-xl text-slate-600 text-left pl-1">
+              {community.name}
+            </CardTitle>
+          </TooltipTrigger>
+          <TooltipContent>
+            <p className="text-sm">Community name</p>
+          </TooltipContent>
+        </Tooltip>
+
         <div className="flex justify-between mt-4">
-          <CardDescription className="flex gap-1">
-            <MapPin size={18} />
-            {community.group}
-          </CardDescription>
-          <CardDescription className="flex gap-1">
-            {community.averagePrice > 0 ? (
-              <>
-                <CircleDollarSign size={18} />
-                {Intl.NumberFormat("en-US", {
-                  currency: "USD",
-                  minimumFractionDigits: 0,
-                  maximumFractionDigits: 0,
-                }).format(community.averagePrice)}
-              </>
-            ) : (
-              "No homes available"
-            )}
-          </CardDescription>
+          <Tooltip>
+            <TooltipTrigger>
+              <CardDescription className="flex gap-1">
+                <MapPin size={18} />
+                {community.group}
+              </CardDescription>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Group</p>
+            </TooltipContent>
+          </Tooltip>
+          <Tooltip>
+            <TooltipTrigger>
+              <CardDescription className="flex gap-1">
+                {community.averagePrice > 0 ? (
+                  <>
+                    <CircleDollarSign size={18} />
+                    {Intl.NumberFormat("en-US", {
+                      currency: "USD",
+                      minimumFractionDigits: 0,
+                      maximumFractionDigits: 0,
+                    }).format(community.averagePrice)}
+                  </>
+                ) : (
+                  "No homes available"
+                )}
+              </CardDescription>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>
+                {community.averagePrice > 0
+                  ? "Average price of homes"
+                  : "There is no home in the community"}
+              </p>
+            </TooltipContent>
+          </Tooltip>
         </div>
       </CardContent>
     </Card>
